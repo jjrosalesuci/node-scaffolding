@@ -1,15 +1,15 @@
 const environment = process.env.NODE_ENV;
 
-const environmentConfigis = {};
+const environmentConfigs = {};
 
 if (environment === 'production') {
-    // TODO: Modificar environmentConfigis según sea necesario
+    // TODO: Modificar environmentConfigs según sea necesario
 } else {
-    // TODO: Modificar environmentConfigis según sea necesario
+    // TODO: Modificar environmentConfigs según sea necesario
 }
 
 module.exports = {
-    ...environmentConfigis,
+    ...environmentConfigs,
     PORT: 3000,
     static: './public',
 };
