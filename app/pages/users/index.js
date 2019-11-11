@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const Task = require('../../../models/task');
+const User = require('../../../models/user');
 
 router.get('/', (req, res, next) => {
-    Task.getAllTasks()
-        .then(tasks => {
-            res.render('to-do-list', {
-                tasks,
+    User.getAllUsers()
+        .then(users => {
+            res.render('users', {
+                users,
             });
         })
         .catch(err => {

@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const Task = require('../../models/task');
-//Handlers para los endpoints de la API de Tasks
+const User = require('../../models/user');
+//Handlers para los endpoints de la API de Users
 
-router.get('/:id', (req, res, next) => {
-    Task.getAllTaskById(req.params.id)
-        .then(task => {
+router.get('/:username', (req, res, next) => {
+    User.getUserByUsername(req.params.username)
+        .then(user => {
             res.json({
-                task,
+                user,
             });
         })
         .catch(err => {
@@ -15,10 +15,10 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.get('/', (req, res, next) => {
-    Task.getAllTasks()
-        .then(tasks => {
+    User.getAllUsers()
+        .then(users => {
             res.json({
-                tasks,
+                users,
             });
         })
         .catch(err => {
