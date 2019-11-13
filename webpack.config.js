@@ -2,7 +2,8 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        'to-do-list': './app/client/to-do-list.js'
+        'to-do-list': './app/client/to-do-list.js',
+        'users': './app/client/users.js'
     },
     devtool: 'eval-source-map',
     module: {
